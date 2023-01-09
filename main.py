@@ -16,7 +16,7 @@ translator = pipeline("translation_ru_to_en", model=model, tokenizer=tokenizer)
 
 @app.get("/")
 def root():
-    return {"message": "Translate ru-en app"}
+    return {"message": "Translate ru-en app. Use method /translate"}
 
 
 @app.get("/translate", response_class=HTMLResponse)
@@ -24,11 +24,6 @@ def translate(request: Request):
     return templates.TemplateResponse('home.html', {'request': request})
 
 
-def predict(df: str):
-    return translator(df)[0]
-
-
 @app.post("/translate",response_class=HTMLResponse)
 async def handle_form(request: Request, assignment: str = Form(...)):
-    return templates.TemplateResponse('home.html',{'request': request, 'result': predict(assignment)})
-
+    return templates.TemplateResponse('home.html',{'request': request, 'result': translator(assignment)[0]})
