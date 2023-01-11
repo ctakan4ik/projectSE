@@ -6,7 +6,7 @@
 * [Лихачев Денис](https://github.com/Liha4) - Разработка тестов
 * [Пихтовникова Ирина](https://github.com/IraPikhtovnikova) - Развертывание приложения на платформе Яндекс.Облако
 * [Чераева Олеся](https://github.com/rulthw) - Настройка github actions
-* 
+
 ## Описание приложения
 Цель данного приложения - перевод текста с русского на английский.
 
@@ -17,4 +17,4 @@
 
 
 ## Пример работы приложения:
-![Пример работы приложения](![github](https://user-images.githubusercontent.com/38241217/211805228-7d78d760-7eec-470f-9e85-5e9f1b97acae.gif))
+![Пример работы приложения](https://user-images.githubusercontent.com/38241217/211805228-7d78d760-7eec-470f-9e85-5e9f1b97acae.gif)
