@@ -1,16 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" content="text/html">
     <title>Software Engineering project</title>
-
 </head>
 <body>
-<form action="/translate" method="post">
-  <input type="text" name = 'assignment'>
-  <button type="submit">Отправить</button>
-</form>
-<h1>Текст = {{assignment}}</h1>
-<h2>Перевод = {{ result }}</h2>
+<div class="center">
+  <h1>Translation ru-en</h1>
+  <form action="/translate" method="post" class="form-anticlear">
+    <div class="inputbox">
+      <span>Исходный текст</span>
+      <textarea class="txtarea" name="assignment"></textarea>
+    </div>
+    <div class="inputbox">
+      <button type="submit">Перевести</button>
+    </div>
+  </form>
+  <div class="inputbox">
+     <textarea class="txtarea" id="txtarea" name="txtarea" readonly>{{ result }}</textarea>
+      <span>Перевод</span>
+    </div>
+</div>
+
 </body>
+<script src="https://cdn.jsdelivr.net/gh/akjpro/form-anticlear/base.js"></script>
+<style type="text/css">
+  @import url("https://fonts.googleapis.com/css2?family=Lobster:wght@600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(60deg, #92EFFD, #FFBBBB);
+
+}
+h1{
+  font-family: "Lobster", cursive;
+}
+.center {
+  position: relative;
+  padding: 50px 50px;
+  background: #fff;
+  border-radius: 10px;
+  height: 530px;
+}
+.center h1 {
+  font-size: 2em;
+  border-left: 5px solid #4E65FF;
+  padding: 10px;
+  color: #000;
+  letter-spacing: 5px;
+  margin-bottom: 60px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.center .inputbox {
+  position: relative;
+  width: 350px;
+  height: 50px;
+  margin-top: 70px;
+
+}
+.center .inputbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+.txtarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  resize: none;
+  height: 100px;
+}
+.center .inputbox:last-child {
+  margin-bottom: 0;
+}
+.center .inputbox span {
+  position: absolute;
+  top: 14px;
+  font-size: 1em;
+  transition: 0.6s;
+  font-family: sans-serif;
+  margin-top: -40px;
+  width: 370px;
+  text-align: center;
+}
+.center .inputbox input:focus ~ span,
+.center .inputbox input:valid ~ span {
+  transform: translateX(-13px) translateY(-35px);
+  font-size: 1em;
+}
+.center .inputbox [type="submit"] {
+  width: 50%;
+  height: 80%;
+  background: #4E65FF;
+  color: #fff;
+  border: #fff;
+  margin-left: 28%;
+  margin-top: 10%;
+}
+.center .inputbox:hover [type="submit"] {
+  background: linear-gradient(60deg, #4E65FF, #FFBBBB);
+}
+
+</style>
 </html>
