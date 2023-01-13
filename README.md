@@ -17,4 +17,4 @@
 
 
 ## Пример работы приложения:
-![Пример работы приложения](https://user-images.githubusercontent.com/38241217/211805228-7d78d760-7eec-470f-9e85-5e9f1b97acae.gif)
+![Пример работы приложения](https://user-images.githubusercontent.com/38241217/212289700-8830462c-0840-4f60-a6e6-907f6f4f60da.gif)
